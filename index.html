@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ランダム選択システム</title>
+  <title>随机选择器</title>
   <script src="js/jquery.min.js"></script>
 </head>
 <body>
   <h1>ランダム選択システム</h1>
   <div class="summary">
-    <p>1. 選択肢にそれぞれA, B, C, ...と選択肢の数に併せて設定してください。</p>
-    <p>2. 選択肢の数を選択してスタートボタンを押してください。</p>
-    <p>3. 結果がA, Bなどと表示される。</p>
+    <p>1.选择项分别为A、B、C、。。。和选择项的数量一起设置。</p>
+    <p>2.选择选择选项的数量，然后按开始按钮。</p>
+    <p>3.结果显示为A、B等。</p>
+
   </div>
-  <p>選択肢の数を選択してください：
+  <p>请选择选项的数量：
     <form action="">
     <select name="number" id="number">
-      <option value="">選択</option>
+      <option value="">选择</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -43,7 +44,7 @@
       var resultNum = Math.floor(Math.random() * number);
       $('#result').text(list[resultNum]);
     } else {
-      $('#result').text("値をセットしてください。");
+      $('#result').text("请设定值。");
     }
   });
   </script>
