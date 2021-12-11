@@ -20,12 +20,12 @@
   </div>
   
   
-  <p>请选择选项的数量：
+  <p>
+    <!--
+    请选择选项的数量：
     <form action="">
     <select name="number" id="number">
-      <!--
       <option value="">选择</option>
-      -->
       <option value="10">10</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -37,6 +37,7 @@
       <option value="8">8</option>
       <option value="9">9</option>
     </select>
+    -->
     <input type="button" value="开始点燃内心的火焰🔥" id="start">
     </form>
   </p>
@@ -44,13 +45,12 @@
 
 
   <script>
-  var number = 0;
   var list = ["地神该亚(Gaea)", "天神乌拉诺斯(Uranus)", "泰坦巨神(Titans)", "天神克洛诺斯(Cronus)", "泰坦女神瑞亚(Rhea)", "泰坦巨神普罗米修斯(Prometheus)", "泰坦巨神厄庇米修斯(Epimetheus)", "天神宙斯(Zeus)", "天后赫拉(Hera)", "海神波塞冬(Poseidon)", "冥王哈得斯(Hades)", "农神得墨忒耳(Demeter)", "灶神赫斯提亚(Hestia)", "太阳神阿波罗(Apollo)", "月亮女神阿耳忒弥斯(Artemis)", "爱与美之神阿佛洛狄忒(Aphrodite)", "智能女神雅典娜(Athene)", "冥后珀耳塞福涅(Persephone)", "战神阿瑞斯(Ares)", "火神赫淮斯托斯(Hephaestus)", "青春女神赫拍(Hebe)", "神使赫耳墨斯(Hermes)", "酒神狄俄倪索斯(Dionysus)", "小爱神厄洛斯(Eros)", "牧神潘(Pan)", "胜利女神尼姬(Nike)", "英雄赫拉克勒斯(Heracles)"];
   $('#start').on('click', function() {
     number = $('#number').val();
     if (number != '') {
-      var resultNum = Math.floor(Math.random() * number);
-      $('#result').text(list[resultNum]);
+      var rand = list[(Math.random() * list.length) | 0];
+      $('#result').text(rand);
     } else {
       $('#result').text("请设定值。");
     }
